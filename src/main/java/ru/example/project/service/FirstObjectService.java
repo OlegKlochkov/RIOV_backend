@@ -47,8 +47,8 @@ public class FirstObjectService {
     }
 
     private FirstObject updateFO(FirstObject firstObject, FirstObject databaseFirstObject) {
-        if(Objects.nonNull(firstObject.getTitle())) databaseFirstObject.setTitle(firstObject.getTitle());
-        if(Objects.nonNull(firstObject.getStatus())) databaseFirstObject.setStatus(firstObject.getStatus());
+        if(Objects.nonNull(firstObject.getName())) databaseFirstObject.setName(firstObject.getName());
+        if(Objects.nonNull(firstObject.getCandidacy())) databaseFirstObject.setCandidacy(firstObject.getCandidacy());
         firstObjectRepo.save(databaseFirstObject);
         return databaseFirstObject;
     }

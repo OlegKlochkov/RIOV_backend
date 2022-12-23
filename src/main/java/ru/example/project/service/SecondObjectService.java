@@ -47,8 +47,8 @@ public class SecondObjectService {
     }
 
     private SecondObject updateSO(SecondObject secondObject, SecondObject databaseSecondObject) {
-        if(Objects.nonNull(secondObject.getTitle())) databaseSecondObject.setTitle(secondObject.getTitle());
-        if(Objects.nonNull(secondObject.getStatus())) databaseSecondObject.setStatus(secondObject.getStatus());
+        if(Objects.nonNull(secondObject.getName())) databaseSecondObject.setName(secondObject.getName());
+        if(Objects.nonNull(secondObject.getProf_id())) databaseSecondObject.setProf_id(secondObject.getProf_id());
         secondObjectRepo.save(databaseSecondObject);
         return databaseSecondObject;
     }

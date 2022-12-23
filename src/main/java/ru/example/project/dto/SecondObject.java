@@ -1,9 +1,6 @@
 package ru.example.project.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -13,7 +10,10 @@ public class SecondObject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String title;
-    private StatusEnum status;
+    private String name;
+//    @ManyToOne
+//    @JoinColumn(name = "prof_id", nullable = false)
+//    private FirstObject firstObject;
+    private Long prof_id;
 
 }
